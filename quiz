@@ -1,0 +1,77 @@
+package quizGRS;
+import java.util.Scanner;
+/**
+ * @author Gleydson Rocha
+ */
+public class QuizGRS {
+    public static void main(String[] args) {
+        // Declarando a variável
+        int resp;
+        int pontos = 0;
+        int menu = 3;
+        //Menu
+        Scanner dado = new Scanner(System.in);
+        System.out.println("********Show de Perguntas********");
+        System.out.println("----Cada resposta correta vale 1 ponto----");
+        System.out.println("Se estiver preparado aperte 1");
+        //Entrada de dados para o Menu
+        menu = dado.nextInt();
+        // Verificando entrada de dados (Menu)
+        if (menu == 1){
+            //Primeira pergunta
+            System.out.println("Qual o nome do oceano que banho o Brasil?");
+            System.out.println("(1) -- Atlântico");
+            System.out.println("(2) -- Pacífico");
+            System.out.println("(3) -- Mediterrâneo");
+            System.out.println("(4) -- Egeu");
+            resp = dado.nextInt();
+            if (resp == 1){
+                System.out.println("Correto!");
+                pontos = (pontos) + 1;
+            }else{
+                System.out.println("Respsta Incorreta!");
+            }
+            //Segunda pergunta
+            System.out.println("Qual o nome do platerra que vivemos?");
+            System.out.println("(1) -- Vênus");
+            System.out.println("(2) -- Terra");
+            System.out.println("(3) -- Plutão");
+            System.out.println("(4) -- Marte");
+            resp = dado.nextInt();
+            if (resp == 2){
+                System.out.println("Correto!");
+                pontos = (pontos) + 1;
+            }else{
+                System.out.println("Respsta Incorreta!");
+            }
+             //Terceira pergunta
+            System.out.println("Quantos dias tem uma semana?");
+            System.out.println("(1) -- 1");
+            System.out.println("(2) -- 5");
+            System.out.println("(3) -- 6");
+            System.out.println("(4) -- 7");
+            resp = dado.nextInt();
+            if (resp == 4){
+                System.out.println("Correto!");
+                pontos = (pontos) + 1;
+            }else{
+                System.out.println("Respsta Incorreta!");
+            }
+            //Quarta  pergunta
+            System.out.println("Qual o primeiro dia da semana?");
+            System.out.println("(1) -- Domingo");
+            System.out.println("(2) -- Segunda");
+            System.out.println("(3) -- Terça");
+            System.out.println("(4) -- Quarta");
+            resp = dado.nextInt();
+            if (resp == 1){
+                System.out.println("Correto!");
+                pontos = (pontos) + 1;
+            }else{
+                System.out.println("Respsta Incorreta!");
+            }        
+        }
+        //Resultado do jogo        
+        System.out.println("Você acertou " + (pontos)+" pontos");
+    }
+}
